@@ -1,0 +1,17 @@
+1491. Average Salary Excluding the Minimum and Maximum Salary
+
+def average(self, salary: List[int]) -> float:
+        average = 0.0
+        sum = 0
+        
+        arr = sorted(salary)
+        
+        for i in range(1,len(arr)-1):
+            sum += arr[i]
+        
+        average = sum / (len(arr)-2)
+        return(average)
+        
+result:
+   Runtime: 41 ms, faster than 73.05% of Python3 online submissions for Average Salary Excluding the Minimum and Maximum Salary.
+   Memory Usage: 13.9 MB, less than 54.82% of Python3 online submissions for Average Salary Excluding the Minimum and Maximum Salary.
